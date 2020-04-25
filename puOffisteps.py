@@ -34,53 +34,53 @@ def thorwDice():
     return value
 
 def playGame(itterations):
-    mummywins =0
-    daddywins =0
-    zoewins =0
-    lucaswins =0
+    pl1wins =0
+    pl2wins =0
+    pl3wins =0
+    pl4wins =0
     runs =0
     start = time.time()
     for x in range(itterations):
-        mummy=0
-        daddy=0
-        zoe=0
-        lucas=0
+        pl1=0
+        pl2=0
+        pl3=0
+        pl4=0
         winner=False
         while not winner:
             runs += 1
-            newmummy=getPos(mummy+thorwDice())
-            if newmummy<=100:
-                mummy=newmummy
-            if (mummy==100):
-                #print ("mummy won")
-                mummywins = mummywins +1
+            newpl1=getPos(pl1+thorwDice())
+            if newpl1<=100:
+                pl1=newpl1
+            if (pl1==100):
+                #print ("pl1 won")
+                pl1wins = pl1wins +1
                 winner=True
-            newdaddy = getPos(daddy + thorwDice())
-            if newdaddy<=100:
-                daddy=newdaddy
-            if (daddy == 100):
-                #print("daddy won")
-                daddywins = daddywins +1
+            newpl2 = getPos(pl2 + thorwDice())
+            if newpl2<=100:
+                pl2=newpl2
+            if (pl2 == 100):
+                #print("pl2 won")
+                pl2wins = pl2wins +1
                 winner = True
-            newzoe = getPos(zoe + thorwDice())
-            if newzoe<=100:
-                zoe=newzoe
-            if (zoe == 100):
-               # print("zoe won")
-                zoewins = zoewins +1
+            newpl3 = getPos(pl3 + thorwDice())
+            if newpl3<=100:
+                pl3=newpl3
+            if (pl3 == 100):
+               # print("pl3 won")
+                pl3wins = pl3wins +1
                 winner = True
-            newlucas = getPos(lucas + thorwDice())
-            if newlucas<=100:
-                lucas=newlucas
-            if (lucas == 100):
-               # print("lucas won")
-                lucaswins = lucaswins +1
+            newpl4 = getPos(pl4 + thorwDice())
+            if newpl4<=100:
+                pl4=newpl4
+            if (pl4 == 100):
+               # print("pl4 won")
+                pl4wins = pl4wins +1
                 winner = True
     end = time.time()
-    print(f"Mummy Wins {mummywins}")
-    print(f"Daddy Wins {daddywins}")
-    print(f"Zoe Wins {zoewins}")
-    print(f"Lucas Wins {lucaswins}")
+    print(f"pl1 Wins {pl1wins}")
+    print(f"pl2 Wins {pl2wins}")
+    print(f"pl3 Wins {pl3wins}")
+    print(f"pl4 Wins {pl4wins}")
     #print (f"It took {end-start:.5f} seconds runs to calculate {itterations}, on an average of {itterations/(end-start):.5f} per second")
     print(f"It took {runs:,} turns to complete the {itterations} games. That is {runs / (end - start):.0f} turns per second")
     print ("------------------")
