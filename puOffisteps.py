@@ -87,6 +87,6 @@ def playGame(itterations):
 
 if __name__ == '__main__':
     with Pool(5) as p:
-         p.map(playGame, [79995,79998,79997,80000,79996,79999,45000])
+         p.map(playGame, [79995,79998,79997,80000,79996,79999,79999])
 
 
